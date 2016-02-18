@@ -1,0 +1,109 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, *::before, *::after {
+  box-sizing: inherit;
+} 
+
+/**
+ * Basic styles for links
+ */
+a, .link {
+  color: $musimusi;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include on-event {
+    color: darken($musimusi, 20%);
+    text-decoration: none;
+  }
+}
+
+.list-georgian {
+    list-style-type: georgian;
+    list-style-position: inside;
+    padding-left: 0.5em;
+}
+
+
+.background-main-color {
+  background: #FCFCFC;
+}
+
+
+/**
+  * utils
+  */
+
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.clear {
+  clear:both;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.hidden {
+  display: none !important;
+}
+.affix {
+  position: fixed;
+}
+
+
+/**
+ * images
+ */
+
+.img-links {
+  -webkit-transition: opacity 1s linear;
+  -o-transition: opacity 1s linear;
+  -moz-transition: opacity 1s linear;
+  -ms-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+.img-links:hover {  
+  opacity: 0.6;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+} 

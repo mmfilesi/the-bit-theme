@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+body {
+  background: #fbfbfb;
+  background-image: url('img/fondo50.png');
+  background-repeat: repeat;
+}
+
+
+.wrap {
+	background: #ffffff url('img/fondo_izda.png') no-repeat left top;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border-radius: 10px;
+}
+
+
+.border-grey {
+	border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+    padding: 0.5em 0;
+}
